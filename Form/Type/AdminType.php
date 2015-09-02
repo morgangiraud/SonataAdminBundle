@@ -37,6 +37,10 @@ class AdminType extends AbstractType
     {
         $admin = clone $this->getAdmin($options);
 
+        var_dump($options);exit;
+
+        // var_dump($admin);exit;
+
         if ($admin->hasParentFieldDescription()) {
             $admin->getParentFieldDescription()->setAssociationAdmin($admin);
         }
